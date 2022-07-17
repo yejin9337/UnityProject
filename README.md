@@ -2,8 +2,11 @@
 
 ## 게임 개요
 [Baba Is You] 모작
+
 장르 : 퍼즐
+
 원작 게임 링크 : https://store.steampowered.com/app/736260/Baba_Is_You/
+
 플레이 영상 : https://www.youtube.com/watch?v=Q_rZpus79Ic
 
 
