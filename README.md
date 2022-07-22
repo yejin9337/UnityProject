@@ -3,9 +3,9 @@
 ## 게임 후보
 1. [Baba Is You](https://store.steampowered.com/app/736260/Baba_Is_You/) 모작
 
-장르 : 퍼즐
+  장르 : 퍼즐
 
-플레이 영상 : https://www.youtube.com/watch?v=Q_rZpus79Ic
+  플레이 영상 : https://www.youtube.com/watch?v=Q_rZpus79Ic
 
 2. [에어 펭귄](https://www.youtube.com/watch?v=ezhwyV_QZso) 모작
 
