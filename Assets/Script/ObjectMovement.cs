@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class ObjectMovement : MonoBehaviour
 {
-    public Transform Player;
+    private PlayerInput _player;
     private Rigidbody2D _rigidbody;
+
+    private Vector2 vector;
 
     private void Awake()
     {
@@ -17,11 +19,17 @@ public class ObjectMovement : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D Collision)
     {
-        if (other.gameObject.name == "Player")
+        Debug.Log("Ãæµ¹");
+        if (vector.x != 0)
         {
-
+            transform.Translate(vector.x * _player.speed, 0, 0);
         }
+        else if (vector.y != 0)
+        {
+            transform.Translate(0, vector.y * _player.speed, 0);
+        }
+
     }
 }
