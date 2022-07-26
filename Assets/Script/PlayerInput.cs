@@ -8,12 +8,12 @@ public class PlayerInput : MonoBehaviour
     private Vector2 vector;
 
     public int walkCount;
-    private int currentWalkCount; // 이동시키고싶은 픽셀 수
+    private int currentWalkCount; // ???????????? ??? ??
     private bool canMove = true;
 
     void Start()
     {
-        
+
     }
 
     IEnumerator MoveCoroutine()
@@ -37,10 +37,11 @@ public class PlayerInput : MonoBehaviour
         currentWalkCount = 0;
         canMove = true;
     }
+
     void Update()
     {
         if (canMove)
-        {           
+        {
             if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
             {
                 canMove = false;
@@ -51,4 +52,3 @@ public class PlayerInput : MonoBehaviour
 
 
 }
-
