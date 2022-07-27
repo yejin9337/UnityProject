@@ -4,32 +4,36 @@ using UnityEngine;
 
 public enum RuleFlag
 {
-    BabaIsYou,
-    RockIsYou,
-    WallIsYou,
-    FlagIsYou,
+    IsYou,
+    // BabaIsYou,
+    // RockIsYou,
+    // WallIsYou,
+    // FlagIsYou,
 
-    BabaIsStop,
-    RockIsStop,
-    WallIsStop,
-    FlagIsStop,
+    IsStop,
+    // BabaIsStop,
+    // RockIsStop,
+    // WallIsStop,
+    // FlagIsStop,
 
-    BabaIsPush,
-    RockIsPush,
-    WallIsPush,
-    FlagIsPush,
+    IsPush,
+    // BabaIsPush,
+    // RockIsPush,
+    // WallIsPush,
+    // FlagIsPush,
 
-    BabaIsWin,
-    RockIsWin,
-    WallIsWin,
-    FlagIsWin
+    IsWin
+    // BabaIsWin,
+    // RockIsWin,
+    // WallIsWin,
+    // FlagIsWin
 }
 
 public class RuleManager : MonoBehaviour
 {
     private List<Rule> _subjects = new List<Rule>();
 
-    void Start()
+    void Awake()
     {
         Rule.Manager = this;
     }
@@ -38,15 +42,21 @@ public class RuleManager : MonoBehaviour
     {
         switch (ruleFlag)
         {
-            case RuleFlag.BabaIsYou:
-                Debug.Log("BabaIsYou");
-                YouMovement();
+            case RuleFlag.IsYou:
+                Debug.Log("IsYou");;
                 break;
 
-            case RuleFlag.RockIsYou:
-                Debug.Log("RockIsYou");
+            case RuleFlag.IsStop:
+                Debug.Log("IsStop");
                 break;
 
+            case RuleFlag.IsPush:
+                Debug.Log("IsPush");
+                break;
+
+            case RuleFlag.IsWin:
+                Debug.Log("IsWin");
+                break;
         }
     }
 
@@ -65,25 +75,15 @@ public class RuleManager : MonoBehaviour
 
     public void RemoveSubject (Rule ruleObject)
     {
-        _subjects.Remove(ruleObject);
+        //_subjects.Remove(ruleObject);
     }
 
-
-
-
-
-
-    //////////
-
-    public void YouMovement()
+    public bool isWin()
     {
-        //키 입력에 따른 움직임
-
-        if(tag == "Baba")
-        {
-            anim.Play("BabaLeft");
-        }
+        return false;
     }
+
+
 
 
 

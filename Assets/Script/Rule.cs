@@ -16,11 +16,8 @@ public class Rule : MonoBehaviour
 
     public Type Type { get; set; }
 
-    // public Rule Up { get; set; }
     public Rule Down { get; set; }
-    // public Rule Left { get; set; }
     public Rule Right { get; set; }
-
 
     void OnEnable()
     {
@@ -32,12 +29,14 @@ public class Rule : MonoBehaviour
 
     public void CheckRule()
     {
-        if (Right.Type == Type.Verb && Right.Right.Type == Type.Complement)
+        if (Right.Type == Type.Verb && Right.Right.Type == Type.Complement
+            || Right.Type == Type.Verb && Right.Right.Type == Type.Subject)
         {
             Manager.ActivateFlag(RuleFlag.BabaIsWin);
         }
 
-        if (Down.Type == Type.Verb && Down.Down.Type == Type.Complement)
+        if (Down.Type == Type.Verb && Down.Down.Type == Type.Complement
+            || Down.Type == Type.Verb && Down.Down.Type == Type.Subject)
         {
             Manager.ActivateFlag(RuleFlag.BabaIsWin);
         }
