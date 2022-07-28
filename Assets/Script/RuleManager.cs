@@ -43,15 +43,18 @@ public class RuleManager : MonoBehaviour
         switch (ruleFlag)
         {
             case RuleFlag.IsYou:
-                Debug.Log("IsYou");;
+                Debug.Log("IsYou");
+                gameObject.GetComponent<PlayerInput>().enabled = true;
                 break;
 
             case RuleFlag.IsStop:
                 Debug.Log("IsStop");
+                gameObject.GetComponent<Collider2D>().enabled = true;
                 break;
 
             case RuleFlag.IsPush:
                 Debug.Log("IsPush");
+                gameObject.GetComponent<Collider2D>().enabled = true;
                 break;
 
             case RuleFlag.IsWin:
@@ -77,14 +80,6 @@ public class RuleManager : MonoBehaviour
     {
         //_subjects.Remove(ruleObject);
     }
-
-    public bool isWin()
-    {
-        return false;
-    }
-
-
-
 
 
 }

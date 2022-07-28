@@ -29,8 +29,7 @@ public class Rule : MonoBehaviour
 
     public void CheckRule()
     {
-        if (Right.Type == Type.Verb && Right.Right.Type == Type.Complement
-            || Right.Type == Type.Verb && Right.Right.Type == Type.Subject)
+        if (Right.Type == Type.Verb && Right.Right.Type == Type.Complement)
         {
             Manager.ActivateFlag(RuleFlag.BabaIsWin);
         }

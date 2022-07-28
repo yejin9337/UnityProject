@@ -4,30 +4,28 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public float xInput;
-    public float yInput;
-    public bool zInput;
     public InputController _controller;
 
-    private bool canMove = true;
+    
 
     void Update()
     {
-        if(canMove)
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-            canMove = false;
-            xInput = Input.GetAxis("Horizontal");
-            yInput = Input.GetAxis("Vertical");
-
-            zInput = Input.GetKeyDown(KeyCode.Z);
-
-            StartCoroutine(MoveCoroutine());
+            _controller.MoveUp();
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            _controller.MoveDown();
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            _controller.MoveLeft();
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            _controller.MoveRight();
         }
     }
-
-    IEnumerator MoveCoroutine()
-    {
-        yield return new WaitForSeconds(0.5f);
-        canMove = true;
-    }
 }
+
